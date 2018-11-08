@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.10.4",
+    "node-sass-chokidar": "^1.3.4",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "sh -ac '. ./env/debug; npm-run-all -p watch-css start-js '",
+    "build-js": "react-scripts build",
+    "build:prod": "sh -ac '. ./env/production; npm-run-all build-css build-js'",
+    "build:dev": "sh -ac '. ./env/development; npm-run-all build-css build-js'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,9 +27,12 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Alihan Berk Bilgiç",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "node-sass-chokidar": "^1.3.3",
+    "npm-run-all": "^4.1.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alihanberk/CV.git"
