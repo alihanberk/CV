@@ -1,0 +1,43 @@
+.cover{
+
+  .cover__image{
+    background-image: url('/assets/images/bg.jpg');
+    backface-visibility: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: block;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    height: 480px;
+    max-height: 480px;
+    min-height: 200px;
+  }
+
+  .cover__content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: $--white;
+
+    h1, h2{
+      color: $--white;
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+
+    h6{
+      color: $--white;
+      font-weight: 100;
+      font-size: 1rem;
+    }
+  }
+}
+
+

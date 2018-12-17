@@ -1,5 +1,5 @@
-import Header from './Header'
+import Cover from './Cover'
 
 export {
-    Header
+    Cover
 }

@@ -1,2 +1,38 @@
 body {
-  background: #e7e7e7; }
+  background: #e7e7e7;
+  font-family: 'Saira Semi Condensed', sans-serif !important;
+  font-size: 16px;
+  margin: 0px; }
+
+.cover .cover__image {
+  background-image: url("/assets/images/bg.jpg");
+  backface-visibility: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: block;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  height: 480px;
+  max-height: 480px;
+  min-height: 200px; }
+
+.cover .cover__content {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #ffffff; }
+  .cover .cover__content h1, .cover .cover__content h2 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 2.5rem; }
+  .cover .cover__content h6 {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 1rem; }
